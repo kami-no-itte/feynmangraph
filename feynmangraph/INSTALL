@@ -1,0 +1,15 @@
+If you install FG from tar-distribution, the folowing should be done to make it work:
+
+1. Untar the archive
+
+1. Copy the all files from FG-1.xx/ to the desired location (e.g.,
+   to /usr/share/FG/ ).
+2. Edit the file FG (or Fg): change the path to the fg.tcl file
+   so that it points to your FG install directory.
+3. In the file fg.tcl, edit the line
+
+        set dir /usr/share/FG/
+
+   so that the "dir" variable set to the FG install directory.
+4. Put executable FG (or link to it) in a place where it can be found
+   in the PATH (e.g., /usr/local/bin). 

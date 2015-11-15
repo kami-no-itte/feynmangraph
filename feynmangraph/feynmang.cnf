@@ -1,0 +1,298 @@
+global db
+
+set db(FGconfigVersion) "4.02"
+
+set db(FGrc) ".fg_rc"
+set db(LogoFN) "logo.gif"
+set db(StartDelay) 3000
+
+if ![info exists db(LoadConfigAgain)] {
+     set db(diag) 1
+     set db(tagN) 0
+     set db(winN) 0	
+     set db(diag,Comment) ""
+     set db(mode) ""
+     set db(linetype) ""
+     set db(DiagDefaultFN) "diag.dia"
+     set db(DiagNumTxt)     " Diagram # 1 "
+     set db(DiagCommentTxt)     "FG"
+#     font create italic-medium-34 -family Times -size 36 -slant italic
+#     font create italic-medium-24 -family Times -size 24 -slant italic
+#     font create italic-medium-18 -family Times -size 18 -slant italic
+
+}
+
+
+set db(LoadConfigAgain) ""
+set db(DashL) 10
+set db(CrossSize) 12
+set db(PhotonL) 5
+set db(PhotonH) 6
+set db(ArcPhotonL) 6
+set db(ArcPhotonH) 5
+set db(GluonL) 2.2
+set db(GluonH) 9
+set db(GluonS) 3.4
+set db(GluonP) 2.5
+set db(ArcGluonP) 3.6
+set db(ArcGluonL) 2.3
+set db(ArcGluonH) 9
+set db(ArcGluonS) 3.6
+set db(WbosonL) 3
+set db(WbosonH) 8
+set db(ArcWbosonL) 3
+set db(ArcWbosonH) 8
+
+
+set db(VertexR) 3
+
+set db(italic-medium-34) "-adobe-times-medium-i-normal--34-240-100-100-p-168-iso8859-1"
+set db(italic-medium-24) "-adobe-times-medium-i-normal--24-240-75-75-p-125-iso8859-1"
+set db(italic-medium-18) "-adobe-times-medium-i-normal--18-180-75-75-p-94-iso8859-1"
+set db(italic-medium-12) "-adobe-times-medium-i-normal--12-180-75-75-p-94-iso8859-1"
+set db(italic-bold-34) "-adobe-times-bold-i-normal--34-240-100-100-p-170-iso8859-1"
+set db(italic-bold-24) "-adobe-times-bold-i-normal--24-240-75-75-p-128-iso8859-1"
+set db(italic-bold-18) "-adobe-times-bold-i-normal--18-180-75-75-p-98-iso8859-1"
+set db(italic-bold-12) "-adobe-times-bold-i-normal--12-180-75-75-p-98-iso8859-1"
+set db(roman-medium-34) "-adobe-times-medium-r-normal--34-240-100-100-p-170-iso8859-1"
+set db(roman-medium-24) "-adobe-times-medium-r-normal--24-240-75-75-p-124-iso8859-1"
+set db(roman-medium-18) "-adobe-times-medium-r-normal--18-180-75-75-p-94-iso8859-1"
+set db(roman-medium-12) "-adobe-times-medium-r-normal--12-180-75-75-p-94-iso8859-1"
+set db(greek-medium-34) "-adobe-symbol-medium-r-normal--34-240-100-100-p-191-adobe-fontspecific"
+set db(greek-medium-24) "-adobe-symbol-medium-r-normal--24-240-75-75-p-142-adobe-fontspecific"
+set db(greek-medium-18) "-adobe-symbol-medium-r-normal--18-180-75-75-p-107-adobe-fontspecific"
+set db(greek-medium-12) "-adobe-symbol-medium-r-normal--12-180-75-75-p-107-adobe-fontspecific"
+
+
+set db(TextFont) "italic-medium-24"
+
+set diag(HImageW)  0
+set diag(HImageH)  0
+set diag(HScreenW) 640
+set diag(HScreenH) 480
+set diag(ScreenW)  640
+set diag(ScreenH)  480
+set diag(CScreenW) 640
+set diag(CScreenH) 192
+
+set diag(Zoom) 1
+set diag(HImageX) 0
+set diag(HImageY) 0
+set diag(HImageFromX) 0
+set diag(HImageFromY) 0
+set diag(HScreenFromX) 0
+set diag(HScreenFromY) 0
+
+set db(XGridStep) 10
+set db(YGridStep) 10
+set db(GridColor)  "b0b0b0"
+set db(GridColor5) "808080"
+set db(GridStipple) "gray.m.pm"
+
+set db(EditLnClrButtonH) 40
+set db(EditLnClrButtonW) 100
+set db(EditLnColorW) 350
+set db(ClrLnLngth) 150
+
+set db(ObjectList) "Line Arrow Scalar Fermion HFermion Photon Gluon Meson Wboson \
+	Curve Cross Text Oval Vertex line1 arrow1 blob"
+set db(defaultLineColor) black
+set db(ChooseColorMode) "ChooseColor"
+
+set db(linecolor,Scalar) black
+set db(linecolor,Fermion) black
+set db(linecolor,Photon) black
+set db(linecolor,Meson)  black
+set db(linecolor,HFermion)  black
+set db(linecolor,Curve)  black
+set db(linecolor,Gluon)  black
+set db(linecolor,Wboson)  black
+set db(linecolor,Vertex) black
+set db(linecolor,Line)  black
+set db(linecolor,Arrow)  black
+set db(linecolor,arrow1)  black
+set db(linecolor,line1)  black
+set db(linecolor,Cross)  black
+set db(linecolor,Oval)  black
+set db(linecolor,blob)  black
+set db(linecolor,Text)  black
+
+
+set db(stipple,blob) "gray.m.pm"
+set db(linecolor,Bbox)  red
+
+
+set db(help,Draw) "
+To draw a line, choose the type of the line from
+menu, mark the starting point by clicking left mouse button
+(\" <1> \"), drag the cursor to the ending point, and then
+release the button. The red line shows the position where
+the line is going to be placed. To actually create it, press
+the right mouse button ( <3> ), to cancel drawing press
+the middle button ( <2> ), or to redraw the line, just start
+drawing with a new starting point.
+
+Drawing arcs is a little bit different. After fixing starting
+and ending points in the way you draw the line in \"Draw Line\"
+mode, you will see marks on these points, some auxulary line and
+a round coursor in the middle of the line. Moving the coursor
+with <1>, you can set the height of the arc. Then <3> will draw
+the actual arc line, and again, <2> cancels the \"Draw Arc\" mode.
+
+In general, FG reports what it is doing in the right lower
+corner of the window borders.
+"
+
+set db(help,Text) "
+The \"Text\" menu allows to put some text into the diagram.
+Before starting new text, you may choose the font.
+Note, that this option is in some way computer dependent,
+so if the X-server font set on your computer does not coinside
+with that used by FG, some fonts may be disabled. See \"ADVANCED\"
+for how to correct the problem.
+
+To put text, choose \"Create Text\" and mark with <1> the position of
+the left upper corner of the future text object. Then the text
+coursor appears and you may start typing. Text can be multi-line, and
+there are some editing features. Again, <2> cancels the mode and <3>
+fixes the object, but <1> will move the text coursor only inside
+the new text.
+"
+
+set db(help,Edit) "
+The only things you can do to the objects other than text are to
+move, copy or remove. Anyway, it would be easier to create a new
+line than to alter the old one. So, if you click <1> on an object,
+it becomes \"Marked\" or \"Selected\" (on color monitors it also changes
+color). Now, dragging mouse with <1> pressed ( <Motion-1> ) will
+move the object to a new position, <2> will remove and <3> will
+fix it.
+
+Note, that any selected object is immediately copied into internal
+buffer and replaces any old buffer's content.
+
+It is possible to mark all objects in some area, so that they can
+be moved or copied as a whole. To create an area, mark its corner
+with simultaneously pressing \"Shift\" key on the keyboard and right
+button on the mouse ( <Shift-3> ) and then extend it with <Motion-3>.
+When the area is created, you can mark objects inside it with <3>,
+cancel with <2>, or you may start it over again with <Shift-3>.
+Now the marked objects can be moved together by dragging any of
+them (or the frame of the area) with <Motion-1> or removed with
+<2>, and <3> will fix all the objects.
+
+To paste content of the  buffer, press \"Shift\" key on the keyboard
+and left mouse button ( <Shift-1> ). The objects appear \"marked\",
+so they can be moved, deleted or fixed as described before.
+<Control-1> and <Control-Shift-1> produce horizontally and
+vertically mirrored objects.
+
+Texts can be handled in the same way. The only difference is that it
+is possible to edit the text itself. To start editing text, click <1>
+on it twice. This invokes a text editor, with some funny features
+(sorry, I have not programmed moving the text coursor across lines
+by vertical arrows, so please use horisontal arrows or mouse
+instead). Exactly as when creating text, <2> cancels the mode and <3>
+fixes the object, but <1> will move the text coursor only inside
+the text.
+"
+set db(help,File) "
+The functions \"Load Diagram\" and \"Save\", as well as \"Create PS\", are
+almost obvious. \"Load Picture\" and \"Load Config\" are the parts of the 
+\"Advanced\" topic and described there.
+
+It is possible to create or edit a number of diagrams at a time in the
+same FG program. All diagrams will be stored into single file by the
+\"Save\" (or \"Save as...\") operation. Also, \"Load Diagram\" will load all
+the diagrams from the file, replacing in memory diagrams with the same
+numbers. To see the new diagram instead of the old one, use \"Window - 
+Show Loaded\". To see the full list of existing diagrams, use
+\"File - List of Diagrams\". 
+
+The \"List of Diagrams\" box shows the list of existing diagrams
+under their nimbers, with comments and with date and time of last
+update. The lines in the box can be marked with <1>.
+The line \"New Diagram\" is to give the opportunity to open a new
+window for a new diagram.
+
+
+This FG version does not check that the changes are saved, so
+DO NOT FORGET to SAVE a diagram after having edited it. Also,
+if you say \"File - Save\" for some diagram, not only the diagramm
+in that (current) window will be saved, but also all existing diagrams
+will be stored to the same file.
+
+\"File - Create PS\" creates ps-file of the picture in the current window,
+with the size and layout of the page exactly as those of the window.
+So, before creating PS, adjust position of the diagram in the window
+and the size.
+"
+
+set db(help,Window) "
+There are two ways to open a new window: from menu
+\"Window - New Window\", and from the box \"List of Diagrams\"
+(see \"Help on File\"). The diagram number in the current window
+or the comment can be changed with button \"Diagram # ..\".
+
+"
+
+set db(help,Advanced) "
+
+FG can handle \"Photo Image\" objects. They can be loaded with
+\"File - Load Picture\". Images can be moved, copied or removed as
+other objects (except they don't change color when selected). 
+"
+
+set db(help,Number) "
+Pressing button \"Diagram \#\" in the lower left corner of the
+window border enters the dialog, which allows to change the
+current diagram number and to enter a string of commentary.
+" 
+set db(help,About) \
+"
+FeynmanGraph (FG) ver. 1.04
+Copyright (C) 1997,2003 Igor Musatov
+
+FG is a tcl/tk -based application for drawing
+Feynman diagrams for publishing purposes.
+It was written by I.Musatov, with help from V.Serov.
+
+The Program is distributed under term and conditions of the GPL,
+which can be found at http://www.gnu.org/copyleft/gpl.html.
+
+This program is distributed in the hope that it will be
+useful, but without any warranty, express or implied.
+
+
+Send your comments to:
+
+musatov@euler.physics.odu.edu
+
+I.Musatov
+Physics Dept.
+Old Dominion University
+Norfolk, VA 23529
+USA
+"
+###########Default definitions##########
+
+set diag(0,Scalar,coords) ""
+set diag(0,Fermion,coords) ""
+set diag(0,Photon,coords)  ""
+set diag(0,Meson,coords)  ""
+set diag(0,HFermion,coords)  ""
+set diag(0,Curve,coords)  ""
+set diag(0,Gluon,coords)  ""
+set diag(0,Vertex,coords) ""
+set diag(0,Line,coords)  ""
+set diag(0,Arrow,coords)  ""
+set diag(0,arrow1,coords)  ""
+set diag(0,line1,coords)  ""
+set diag(0,Cross,coords)  ""
+set diag(0,Oval,coords)  ""
+set diag(0,blob,coords)  ""
+set diag(0,Comment) ""
+
+
+
+

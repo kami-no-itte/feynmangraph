@@ -1,0 +1,62 @@
+1.04-beta2
+	Line color editor is added
+
+1.04-beta    
+
+	Bug fixes.
+
+	The status line with status of "Font", "Snap to Grid" and
+	"Grid Step" options added.
+
+	Text fonts are defined for each window (not global).
+
+	The size of the diagram window is saved to .dia file, so
+	that when the diagram loaded, the window is restored to
+        its original size.
+
+	W-boson line added.
+
+	Two new types of the "Paste from buffer" feature added:
+	vertical ( <Control-1> ) and horisontal ( <Alt-Shift-1> )
+	mirror reflections. 
+
+	"Grid" and "Snap to Grid" features are implemented. 
+
+	The diagram is updated in memory on every change in the
+	window, so "Update" function in the "File" menu
+	is obsolete. The "List of Diagrams" shows status of each
+	diagram in the first column: "-" - loaded from a file,
+	"*" - changed but not saved.
+
+	Special algorithms were added to search for the file
+	which contains the blob filling pattern. Should improve
+	portability of the files with saved diagrams.
+
+	KDE integration elements are available.
+
+	Starting from 1.04-alpha, FeynmanGraph is distributed
+	under the terms and conditions of the General Public License 
+	(see http://www.gnu.org/copyleft/gpl.html)
+	
+1.03
+
+	$db(InstallDir) is used to look for config, gray.pm files.
+	This should allow some portability for .dia files.
+
+
+1.02
+
+	FG is modified so that it can run from any (not necessary
+	its install location) directory.
+	However, no install script provided at this time.
+	To install it by hands, one should follow rather simple 
+	instructions which can be found in the file INSTALL.chg
+	in this distribution.
+
+	The module fg.tcl takes now one optional argument, the diagram
+	file name, which will be loaded at start if exists.
+
+
+1.01
+
+	Minor bugs fixed.

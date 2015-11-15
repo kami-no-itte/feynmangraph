@@ -1,0 +1,1 @@
+wish -f /usr/share/FG/fg.tcl $1
